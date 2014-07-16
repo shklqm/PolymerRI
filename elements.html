@@ -1,0 +1,33 @@
+<link rel="import" href="core-style.html">
+
+<core-style id="my-panel">
+  :host {
+    display: inline-block;
+    height: 250px;
+    width: calc({{ 100 / g.columns }}% - 16px);
+    font-size: 50px;
+    background: gray;
+    margin: 8px;
+  }
+</core-style>
+
+<script>
+	var x, y, xmy;
+	
+		go();
+		window.addEventListener('resize', go)
+
+		function go(){
+		  x = document.documentElement.clientWidth;
+		  xmy = Math.round(x / 350);
+		}
+	
+  CoreStyle.g.columns = xmy;
+</script>
+
+<polymer-element name="my-panel" vertical center center-justified layout noscript>
+  <template>
+    <core-style ref="my-panel"></core-style>
+    <content></content>
+  </template>
+</polymer-element>

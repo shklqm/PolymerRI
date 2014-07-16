@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <title>Test</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="../components/platform/platform.js"></script>
+  <link rel="import" href="../components/font-roboto/roboto.html">
+  <link rel="import" href="../components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="../components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="../components/paper-tabs/paper-tabs.html">
+  <style>
+  .test{
+	display: inline-block;
+	margin:  9px ;
+	padding: 5%;
+  }
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  core-toolbar {
+    background: #000000;
+    color: white;
+  }
+  #tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  </style>
+</head>
+
+<body unresolved touch-action="auto">
+  <core-header-panel>
+    <core-toolbar>
+      <paper-tabs raisedButton onclick="document.querySelector('#toast1').show()" id="tabs" selected="all" valueattr="name" self-end>
+	    <paper-tab name="marka">Marka</paper-tab>
+        <paper-tab name="refresh">Refresh</paper-tab>
+        <paper-tab name="take_photo">Take photo</paper-tab>
+      </paper-tabs>
+    </core-toolbar>
+
+    <!-- main page content will go here -->
+		<div class="test"> <img src="images/shelflist-small/raf1.png" /> <img style="height:auto; width:auto; max-width:300px; max-height:250px;" src="images/photos/1.jpeg" /> </div>
+	
+		<div class="test"> <img src="images/shelflist-small/raf2.png" /> <img style="height:auto; width:auto; max-width:350px; max-height:300px;" src="images/photos/2.jpeg" /></div>
+	
+		<div class="test"> <img src="images/shelflist-small/raf3.png" /> <img style="height:auto; width:auto; max-width:350px; max-height:300px;" src="images/photos/3.jpeg" /></div>
+	
+		<div class="test"> <img src="images/shelflist-small/raf4.png" /> <img style="height:auto; width:auto; max-width:350px; max-height:300px;" src="images/photos/4.jpeg" /></div>
+	
+		<div class="test"> <img src="images/shelflist-small/raf5.png" /> <img style="height:auto; width:auto; max-width:350px; max-height:300px;" src="images/photos/5.jpeg" /></div>
+	
+		<div class="test"> <img src="images/shelflist-small/raf6.png" /> <img style="height:auto; width:auto; max-width:350px; max-height:300px;" src="images/photos/6.jpeg" /></div>
+	
+  </core-header-panel>
+  
+ <script>
+  var tabs = document.querySelector('paper-tabs');
+
+  tabs.addEventListener('core-select', function() {
+    	alert('Hello there!');
+  });
+  </script>  
+</body>
+
+</html>
