@@ -5,11 +5,13 @@
   
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <script src="components/platform/platform.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="js/myscript.js"></script>
   
   <link rel="import" href="elements.html">
   <link rel="import" href="components/core-toolbar/core-toolbar.html">
   <link rel="import" href="components/paper-tabs/paper-tabs.html">
-  
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
   
   <core-style id="my-panel">
   :host {
@@ -17,20 +19,6 @@
   }
   </core-style>
   
-  <style>
-  core-toolbar {
-    background: #000000;
-    color: white;
-  }
-  #tabs {
-    width: 100%;
-    margin: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  </style>
 </head>
 <body unresolved fullbleed vertical layout>
   <core-style ref="main"></core-style>
@@ -45,29 +33,11 @@
 
   <template is="auto-binding">
     <section flex horizontal wrap layout>
-		<my-panel> <img style="max-width:283px ; max-height:290px;" src="images/photos/1.jpeg" /> <img style="position: relative;
-			left: -120px;" src="images/shelflist-small/raf1.png" /></my-panel>
-		<my-panel> <img style="max-width:283px ; max-height:290px;" src="images/photos/2.jpeg" /> <img style="position: relative;
-			left: -120px;" src="images/shelflist-small/raf2.png" /></my-panel>
-		<my-panel> <img style="max-width:283px ; max-height:290px;" src="images/photos/3.jpeg" /> <img style="position: relative;
-			left: -120px;" src="images/shelflist-small/raf3.png" /></my-panel>
-		<my-panel> <img style="max-width:283px ; max-height:290px;" src="images/photos/4.jpeg" /> <img style="position: relative;
-			left: -120px;" src="images/shelflist-small/raf4.png" /></my-panel>
-		<my-panel> <img style="max-width:283px ; max-height:290px;" src="images/photos/5.jpeg" /> <img style="position: relative;
-			left: -120px;" src="images/shelflist-small/raf5.png" /></my-panel>
-		<my-panel> <img style="max-width:283px ; max-height:290px;" src="images/photos/6.jpeg" /> <img style="position: relative;
-			left: -120px;" src="images/shelflist-small/raf6.png" /></my-panel>                
+		<template repeat="{{item in items}}">
+  	      <my-panel> <img class = "mainImage"  src = {{item[0]}} /> <img class = "shelfList" src={{item[1]}} /></my-panel>
+        </template>
     </section>
   </template>
   
-  
-   <script>
-  var tabs = document.querySelector('paper-tabs');
-
-  tabs.addEventListener('core-select', function() {
-    	//alert('Hello there!');
-  });
-  </script> 
-
 </body>
 </html>

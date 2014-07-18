@@ -1,0 +1,39 @@
+{
+  "cams": [
+    {
+      "url": "images/photos/1.jpeg",
+      "type": "raspi",
+      "id": 1,
+      "name": "raspicam1"
+    },
+    {
+      "url": "images/photos/2.jpeg",
+      "type": "raspi",
+      "id": 2,
+      "name": "raspicam2"
+    },
+    {
+      "url": "images/photos/3.jpeg",
+      "type": "raspi",
+      "id": 3,
+      "name": "raspicam3"
+    },
+    {
+      "url": "images/photos/4.jpeg",
+      "type": "raspi",
+      "id": 4,
+      "name": "raspicam4"
+    },
+    {
+      "url": "images/photos/5.jpeg",
+      "type": "raspi",
+      "id": 5,
+      "name": "raspicam5"
+    }
+   
+  ],
+  "deviceName": "Sample Device",
+  "usbCamCount": 0,
+  "raspiCamCount": 6,
+  "deviceId": 1
+}
