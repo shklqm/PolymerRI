@@ -8,11 +8,13 @@
   	position: relative;
 	left: -131px;
   }
-  core-toolbar {
+  core-toolbar 
+  {
     background: #000000;
     color: white;
   }
-  #tabs {
+  #tabs 
+  {
     width: 100%;
     margin: 0;
     -webkit-user-select: none;
